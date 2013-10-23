@@ -90,6 +90,12 @@ var demo = (function () {
 		}else{
 		
 		$.each( person, function( key, value ) {
+			if(key=="Phone"){
+				value = "<a href='tel:"+value+"'>"+value+"</a>";
+			}else if(key=="E-mail"){
+			value = "<a href='mailto:"+value+"'>"+value+"</a>";
+			}
+		
 			$('#details').append('<p><span class="row"><b class="col-md-6">'+key + ': '+'</b><span class="col-md-6 pull-right">' + value+'</span></span></p>');
 		});
 		  $("#detailsContainer").show('slow');
