@@ -80,7 +80,7 @@ var demo = (function () {
 			this.clear();
 			return;
 		}
-		
+		navigator.notification.vibrate(500);
 		var person = _.find(employees,function(p){ return p.Firstname+' '+p.Name == lookup; });
 		if(!person){
 		 $("#details").html("<span class='text-warning'>No such person found</span>");
